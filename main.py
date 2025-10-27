@@ -4,12 +4,8 @@ db = m.connect(host="localhost", user='root', passwd='helloworld', database='lib
 
 
 
-
-
-
-
 while True:
-    print('1 - Add Books, 2 - Add Authors, 3 - Add Issuer, 4 - Issue/Return Books')
+    print('1 - Add Books, 2 - Add Authors, 3 - Add Issuer, 4 - Issue/Return Books, 5 - List')
     a = int(input('Enter: '))
     if a == 1:
         i.Add_Books()
@@ -19,9 +15,12 @@ while True:
         i.ISSUE()
     elif a == 4:
         i.Bill()
+    elif a == 5:
+        i.List()
     elif a == 0:
         print('Thanks for using our application!')
         break
+    
     else:
         print('Invalid')
         continue
